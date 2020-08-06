@@ -54,5 +54,6 @@ To use this plugin:
 
 Note that when you run the script, a window might pop up with warnings, this is likely because the CSVs you provided have unparsable lines (like titles, labels, and footnotes). This is fine however GIMP will give up printing these messages, if you think you may be missing a serious error message, go to windows, and open the error console).
 
+Be aware that life isn't perfect :) after plotting your data, you might notice some counties are in the water. That's just where the Census puts them, not much I can do about that.
 
 

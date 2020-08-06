@@ -27,30 +27,29 @@ To use this plugin:
 - Setup the plugin:
   - Region,Subregion,Lat,Long CSV is a required file that contains the data for where locations are physically (in the samples the region/subregion are state and county)
   - Region,Subregion,Value CSV is a required file that contains the value to be mapped
-  -  You can only include items which conform to a specific regex pattern if you wish, (Eg, to exclude Utah, I use "^(Utah.+|(?!Utah).*)$@.*")
+  -  _You can only include items which conform to a specific regex pattern if you wish, (Eg, to exclude Utah, I use "^(Utah.+|(?!Utah).*)$@.*")
   - Region,Preferrred Name,Subregion,Preferred Name CSV is an optional file for renaming regions (I use this to abbreviate states so names match across the first two CSVs)
   - Alignment Point Name,Lat,Long CSV is an optional file for creating anchor points for aligning a map image by hand (obvious physical features of a map, like Florida's tip)
   - Alternate Indices for above files CSV is an option file. If you don't have your files ordered with data in the columns outlined the name (eg: Region,Subregion, ...) you can identify the proper columns in this file)
   - Mimmic Distortion is a layer with the projection skewing you want to mimmic.
-  -  Distort data height if you want the value bars to shrink in height as they go back
-  -  Distort data width if youwant the value bars to have less width as they go back
+  -  _Distort data height if you want the value bars to shrink in height as they go back
+  -  _Distort data width if youwant the value bars to have less width as they go back
   - Minimum Distance before points are combined is how close two points can be before they count as a single point
   - Mimmic Text is a layer you may have set up if you don't want to use the default text format
-  -  Display text for top N data points
-    - Set to 0 if you don't want text numbers over your locations
-    - Set to -1 if you want text numbers over all of your locations
-    - Set to a positive number if you want text numbers over your highest value locations (eg top 10). Note, this only ranks located data.
-    - Note, if you use a positive number, text is always drawn over the bars, if you use -1, text is mixed into the bars based on that data point's depth
-    - If this is not 0, unlocated data will always have a text label.
-    - Creating text takes a while, best of this is 0 while making sure you like where how the bars look.
+  -  _Display text for top N data points
+      - Set to 0 if you don't want text numbers over your locations
+      - Set to -1 if you want text numbers over all of your locations
+      - Set to a positive number if you want text numbers over your highest value locations (eg top 10). Note, this only ranks located data.
+      - Note, if you use a positive number, text is always drawn over the bars, if you use -1, text is mixed into the bars based on that data point's depth
+      - If this is not 0, unlocated data will always have a text label.
+      - Creating text takes a while, best of this is 0 while making sure you like where how the bars look.
   - Value of scale meter, What is the max value, if this is 0, the max value will be whatever the max found value is in located data (maybe run this first, with 0, then make a scale value with a round number higher than the given scale value)
-  -  Pixel height of biggest meter, how tall, in pixels is the largest bar, if this is 0, bars won't be drawn, the smallest meter height is always 1
-  -  Pixel width of biggest meter, how wide is the largest bar
-  -  Pixel width of smallest meter, how small the smallest meter is
-  -  Meter blur, the vertical blur of meters (note that small meters are never blurred), 0 if no blur is desired
-  -  Border opacity, How opaque the bar outline should be, 0 if no outline is desired
-  -  Border color, The color of the bar's border
-  -
+  -  _Pixel height of biggest meter, how tall, in pixels is the largest bar, if this is 0, bars won't be drawn, the smallest meter height is always 1
+  -  _Pixel width of biggest meter, how wide is the largest bar
+  -  _Pixel width of smallest meter, how small the smallest meter is
+  -  _Meter blur, the vertical blur of meters (note that small meters are never blurred), 0 if no blur is desired
+  -  _Border opacity, How opaque the bar outline should be, 0 if no outline is desired
+  -  _Border color, The color of the bar's border
 
 Note that when you run the script, a window might pop up with warnings, this is likely because the CSVs you provided have unparsable lines (like titles, labels, and footnotes). This is fine however GIMP will give up printing these messages, if you think you may be missing a serious error message, go to windows, and open the error console).
 
